@@ -11,11 +11,20 @@ function App() {
     <Router>
       <div className="App">
         <Nav />
-        <Route path="/about" component={ About } />
-        <Route path="/shop"  component={ Shop } />
+        <Switch>
+          <Route path="/" exact component={ Home } />
+          <Route path="/about" component={ About } />
+          <Route path="/shop"  component={ Shop } />
+        </Switch>
     </div>
     </Router>
   );
-}
+  }
+  let Home = () => (
+    <div>
+      <h1>Home Page</h1>
+    </div>
+  )
+
 
 export default App;
